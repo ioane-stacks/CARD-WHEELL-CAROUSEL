@@ -1,0 +1,47 @@
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --wc-width: 600px;
+    --wc-height: 600px;
+}
+
+.wheel-carousel {
+    width: var(--wc-width);
+    height: var(--wc-height);
+    position: absolute;
+    right: calc(var(--wc-width) * -1);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.wheel {
+    position: absolute;
+    width: calc(var(--wc-width) / 3.5);
+    height: calc(var(--wc-width) / 3.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: green;
+    border-radius: 50%;
+}
+
+.card {
+    width: calc(var(--wc-width) / 3.91304347826087);
+    height: calc(var(--wc-height) / 6.1764705882353);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: red;
+    border-radius: 5px;
+    transition: .2s;
+    -webkit-transition: .2s;
+}
+
+.card:hover {
+    width: calc(var(--wc-width) / 3.15);
+    height: calc(var(--wc-height) / 5);
+    z-index: 3;
+}
